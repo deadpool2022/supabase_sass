@@ -2,6 +2,7 @@ import { supabase } from "../utils/supabase.js";
 import Link from "next/link";
 
 export default function Home({ lessons }) {
+  console.log("logged in user:-", supabase.auth.user());
   return (
     <div className='flex flex-col items-center justify-center min-h-screen py-2'>
       {lessons.map((lesson) => (
